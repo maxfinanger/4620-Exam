@@ -1,0 +1,29 @@
+nano .gitignore
+# Data files (CIFAR-10 downloads automatically)
+data/
+*.tar.gz
+*.pkl
+*.npz
+
+# Model checkpoints (optional - these can be large)
+*.pth
+*.pt
+*.ckpt
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# MacOS files
+.DS_Store
+
+# Virtual environments
+venv/
+env/
+ENV/
