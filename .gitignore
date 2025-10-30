@@ -1,4 +1,3 @@
-nano .gitignore
 # Data files (CIFAR-10 downloads automatically)
 data/
 *.tar.gz
@@ -27,3 +26,19 @@ __pycache__/
 venv/
 env/
 ENV/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Output files
+*.log
+*.out
+*.err
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
