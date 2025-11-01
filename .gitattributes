@@ -1,0 +1,17 @@
+# Normalize line endings for all text files
+* text=auto eol=lf
+
+# Treat Jupyter notebooks as binary (prevents giant unreadable diffs)
+*.ipynb binary
+
+# Explicitly mark Python scripts as text (useful on Windows)
+*.py text
+
+# Ensure common text configs are normalized
+*.md text
+*.txt text
+*.yml text
+*.yaml text
+*.gitignore text
+*.gitattributes text
+requirements.txt text
