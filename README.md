@@ -1,82 +1,60 @@
-# ACIT4610 Exam - XAI Image Classification
+## Project Dependencies
 
-All notebooks are designed to run **independently of any IDE** — you only need Python and Jupyter installed.
+This project uses the following libraries (see [`requirements.txt`](requirements.txt)):
 
----
+### Core Deep Learning
 
-## Quick Setup & Onboarding Guide
+- **PyTorch** (`torch`, `torchvision`) - Neural network framework & pretrained models
+- **NumPy** - Array operations and numerical computing
 
-This section helps you get up and running quickly — from environment setup to running notebooks — whether you use an IDE or just the terminal.
+### Explainable AI (XAI)
 
----
+- **LIME** (`lime`) - Local Interpretable Model-agnostic Explanations
+- **OpenCV** (`cv2`) - Image processing for Grad-CAM heatmaps
+- **scikit-image** - Image segmentation for LIME visualizations
 
-### 1. Create and activate a virtual environment
+### Data Analysis & Visualization
 
-You can create the virtual environment using either your **IDE’s built-in tools** (PyCharm, VS Code, etc.) or directly in the **terminal**, which works everywhere.
+- **Matplotlib** - Plotting training curves and visualizations
+- **Seaborn** - Confusion matrix heatmaps
+- **scikit-learn** - Metrics (confusion matrix, accuracy)
 
-#### Windows (PowerShell)
-```powershell
+### Development Tools
+
+- **Jupyter** (`notebook`, `jupyterlab`) - Interactive notebook environment
+- **tqdm** - Progress bars during training
+- **ipywidgets** - Interactive notebook widgets
+
+## Installation
+
+### Quick Start
+
+```bash
+# 1. Create virtual environment
 python -m venv .venv
+
+# 2. Activate environment
+# Windows:
 .venv\Scripts\Activate
-```
-
-#### macOS / Linux (bash or zsh)
-```bash
-python3 -m venv .venv
+# macOS/Linux:
 source .venv/bin/activate
-```
 
-After activation, your terminal prompt should start with `(.venv)`.
-
----
-
-### 2. Install dependencies
-
-Make sure you’re in the project folder (where `requirements.txt` is located), then run:
-
-```bash
+# 3. Install all dependencies
 pip install -r requirements.txt
-```
 
-This installs all core libraries, including:
-- `numpy`, `pandas`, `matplotlib`
-- `notebook`, `jupyterlab`
-- `scipy`, `seaborn`
-- and other helper tools
-
-> **Tip:** Add or update dependencies in `requirements.txt` **manually**.  
-> Avoid using IDE prompts like *"Sync Project with requirements.txt"* — they can clutter the file with unnecessary or duplicate packages.  
-> Some libraries (like `setuptools`, `pip`, or `wheel`) are automatically installed when you install Python, so there’s no need to include them in the list.
-
----
-
-### 3. Run Jupyter notebooks (IDE-independent)
-
-Once your virtual environment is active, launch Jupyter Lab or Notebook:
-
-```bash
+# 4. Launch Jupyter
 jupyter lab
 ```
-or
-```bash
-jupyter notebook
-```
 
-Then open any notebook to begin working with the project.
+### Notes
 
----
+- **No IDE required** - Works with any text editor + terminal
+- **No manual package hunting** - All dependencies in one file
+- **Reproducible** - Same versions across systems
 
-## Project Files Overview
+## Tested Environment
 
-- **`.gitattributes`** – Configures Git behavior (e.g., line endings, file handling).  
-- **`.gitignore`** – Tells Git which files/folders to ignore (e.g., `.venv/`, cache files).  
-- **`README.md`** – Contains setup, usage, and environment instructions.  
-- **`requirements.txt`** – Lists Python dependencies. It allows you to install all required packages **in one command**, instead of one by one — saving time and reducing setup frustration.
-
----
-
-## Notes
-
-- **No IDE required:** You can run everything from the terminal and browser.  
-- **Virtual environment benefits:** Keeps dependencies isolated per project.  
-- **Reproducibility:** Use the same `requirements.txt` across systems for consistent results.
+- Python 3.10+
+- PyTorch 2.5.1 (CPU or GPU)
+- CUDA 11.8+ (optional, for NVIDIA GPUs)
+- MPS support (Apple Silicon M1/M2/M3/M4)
